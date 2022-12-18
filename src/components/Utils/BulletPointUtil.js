@@ -11,10 +11,10 @@ export const BulletPointUtil= async(point="")=>{
 
  const result = await JSON.parse(sessionStorage.getItem("PointsArry"));
  console.log(result);
- console.log([result]);  
- const pointArry = [result].map(element=>element.replace(/""/g,''));
- console.log(pointArry);  
- pointArry.forEach(x=>console.log(x))
- return pointArry;
+ if([result]) 
+ // let pointArry = [result].map(element=>element.replace(/""/g,''));
+ // console.log(pointArry);  
+ // pointArry.forEach(x=>console.log(x))
+ return [result];
  
 }

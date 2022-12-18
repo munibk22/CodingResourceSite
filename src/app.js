@@ -1,6 +1,7 @@
  import { getTaskList } from "./components/models/GetTasks";
  import SaveTask from './components/models/SaveTask';
- import {BulletPointUtil} from './components/Utils/BulletPointUtil'
+ import {BulletPointUtil} from './components/Utils/BulletPointUtil';
+ import {GetUser} from './components/models/GetUser';
 
  var taskList = [];
  const taskObj = {};
@@ -17,19 +18,18 @@
 
 const init=()=>{
   console.log("getTaskList"); 
-  getTaskList();  
-  // const lis = $('#taskform ul').find('li input').get();
-  // console.log(lis);
+  // getTaskList(); 
 }
 
 /**
  *
  * @param data  
  * @return  
- */
-$(submitBtn).on('click',(e)=>{
+ * //Handle Task Form
+ */ 
+$(submitBtn).on('click', async(e)=>{
   e.preventDefault();
-  const taskForm = document.getElementById('taskform');
+  const taskForm = await document.getElementById('taskform');
   const imgForm = document.getElementById('handleimg');
   var formData = new FormData(taskForm);
   var imgFormData = new FormData(imgForm);
@@ -44,7 +44,7 @@ $(submitBtn).on('click',(e)=>{
   
   // formData.set('inpFile', inpFile.files[1])
   // formData.append("taskgroup",taskgroup)
-  pointArry = BulletPointUtil();
+  pointArry = await BulletPointUtil();
   formData.append("bulletPoints",pointArry);
   taskElements.forEach(function(task,i){
     const taskType = task.lastElementChild.tagName;
@@ -106,24 +106,6 @@ function removeTask(){
 }
 
 
-
-/**
-  * @param document  
- * @return null
- */
-function removeTask2(){
-  
-  $(removeBtn).click((e)=>{
-    e.preventDefault();
-    console.log("Removed")
-  });
-}
-
-
-function formtest(e){
-  e.preventDefault();
-  console.log("Form test");
-}
 
 // function openTarget() {
 //   const hash = location.hash.substring(1);
