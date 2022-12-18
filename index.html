@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Resources Site</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    type="module" defer></script>
+    <script type="module" src="/src/app.js" defer></script>
+    <script type="module" src="/src/components/main.ts"></script>
+  </head>
+  <body>
+    <div id="" class="container">
+  
+  <section id="handleUser">
+    <details>
+      <summary>Login</summary>
+      <form action="http://localhost:8082/helloname" method="post"    id="nameform"><label for="user">username
+        <input type="text" name="username" id="user"></label>
+        <input type="submit" value="submit name" data-username>
+      </form>
+      <button type="button" data-task-remove>Remove</button>
+    </details>
+  </section>
+    <section id="addTask" class="app2" data-task-section>
+      <details>      
+      <summary  id="deets">Add Task</summary>
+      <form action="/" onsubmit="formtest(e)"  enctype="multipart/form-data" id="taskform">
+        <ul data-group="tasklist">
+          <li data-task="taskgroup">
+            <label for="">TASK GROUP</label>
+            <input type="text" name="taskgroup" id="taskgroup">
+          </li>
+          <li data-task="subgroup">
+            <label for="subgroup">SUB GROUP</label>
+            <input type="text" name="subgroup" id="subgroup" />
+          </li>
+          <li data-task="topic">
+            <label for="topic">Topic </label>
+            <input type="text" name="topic" id="topic" />
+          </li>
+          <li data-task="website"><label for="website">Website</label>
+            <input type="url" name="website" id="website"></li>
+          <li data-task="definition"><label for="definition">Definition</label>
+            <input type="text" name="definition" id="definition"></li>
+          <li data-task="html"><label for="html">Html</label>
+            <input type="text" name="html" id="html"></li>
+          <li data-task="css"><label for="css">Css</label>
+             <input type="text" name="css" id="css"></li>
+          <li data-task="code">
+            <label for="code">CODE</label>
+            <input type="text" name="code" id="code"></li>
+            <li data-task="description">
+              <label for="description">DESCRIPTION</label>
+              <textarea type="text" name="description" id="description"></textarea></li>
+              <li data-task-upload="file">
+              <label for="inpFile">Upload Image</label>
+              <input type="file" name="inpFile" id="inpFile" />
+            </li>
+            <li data-task="bulltpoint">
+               <label  for="bulletpoints">Bullet Points</label>
+               <input type="text" name="" id="bulletpoints" data-bullet-point>
+               <input type="button" id="addPoint" value="+" style="background-color:green;padding:0 1rem;"/>
+            </li>
+            <button id="testid" type="button" data-task-submit="addtask" >Submit Task</button>
+            <!-- <input type="submit" value="Submit" /> -->
+            </ul>
+          </form>
+          <form  id="handleimg" enctype="multipart/form-data">
+            <!-- <li data-task-upload="file">
+              <label for="inpFile">Upload Image</label>
+              <input type="file" name="inpFile" id="inpFile" />
+            </li>
+            <button id="testid" type="button" data-task-submit="addtask" >Submit Task</button> -->
+          </form>
+        </details>
+      </section>
+      <section class="imgsection">
+        
+        
+      </section>
+      <section id="displaytasks">
+        <details>
+          <summary>Task Table</summary>
+          <hr />
+    <!-- <div><img id="ItemPreview" src=""></div> -->
+    <table id="tasksTable"></table>
+  </details>
+  </section>
+      <!-- <button type="button" data-task-submit="addtask">Add</button> -->
+      <section>
+  
+      <!-- <section>
+        <ul data-group-tasks="tasklist"></ul> 
+      </section>
+
+      <h1 class="offscreen">My List</h1>
+
+      <section class="newItemEntry">
+        <h2 class="offscreen">New Item Entry</h2>
+        <form class="newItemEntry__form" id="itemEntryForm">
+          <label for="newItem" class="offscreen">Enter a new to do item</label>
+          <input class="newItemEntry__input" id="newItem" type="text" maxlength="40" autocomplete="off"
+            placeholder="Add item" />
+          <button id="addItem" class="button newItemEntry__button" title="Add new item" aria-label="Add new item to list">
+            +
+          </button>
+        </form>
+      </section>
+  
+      <section class="listContainer">
+        <header class="listTitle">
+          <h2 id="listName">List</h2>
+          <button id="clearItemsButton" class="button listTitle__button" title="Clear the list"
+            aria-label="Remove all items from the list">
+            Clear
+          </button>
+        </header>
+        <hr />
+        <ul id="listItems">
+          <li class="item">
+                      <input type="checkbox" id="1">
+                      <label for="1">eat</label>
+                      <button class="button">X</button>
+                  </li>
+                  <li class="item">
+                      <input type="checkbox" id="2">
+                      <label for="2">sleep</label>
+                      <button class="button">X</button>
+                  </li>
+                  <li class="item">
+                      <input type="checkbox" id="3">
+                      <label for="3">code</label>
+                      <button class="button">X</button>
+                  </li>
+        </ul>
+      </section> -->
+
+    </div>
+  </body>
+</html>
