@@ -1,4 +1,11 @@
 
+onclick = () => {
+ console.log(!detailElem.hasAttribute("open"))
+ if(!detailElem.hasAttribute("open"))
+ getTaskList(); 
+}
+
+// $('#displaytasks').on('click',()=>null);
 export async function getTaskList(){
  try {
   const taskResponse = await fetch
@@ -22,11 +29,9 @@ const displayTasks=(taskList)=>{
 
 if(taskList.length > 0)
 var taskArry = Object.keys(taskList[0]);
-console.log(taskArry); ;
-// const taskArry =  Object.keys(task);
+console.log(taskArry); 
 taskArry.forEach(taskele => {
  li += `<th>${taskele}</th>`;
- // console.log(taskele); 
 });
 taskList.forEach(task => {
  const {taskId, taskgroup, subgroup, topic, code, definition, description, html, css, website, inpFile} = task;

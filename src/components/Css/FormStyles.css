@@ -1,0 +1,56 @@
+
+.nameForm {
+ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+ font-size: 0.8em;
+ padding: 2em;
+ border: 3px solid green;
+ border-radius: 5px;
+ display: flex;
+    gap: 1rem;
+ }
+ 
+ .nameForm * {
+ box-sizing: border-box;
+ }
+ 
+ .nameForm label {
+ font-size: 0.9em;
+ }
+ 
+ .nameForm .audioOnly {
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ padding: 0;
+ margin: -1px;
+ overflow: hidden;
+ clip: rect(0, 0, 0, 0);
+ border: 0;
+ }
+ 
+ .nameForm input {
+ border: 1px solid #ccc;
+ border-radius: 3px;
+ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+ font-size: 0.9em;
+ padding: 0.5em;
+ }
+ 
+ .nameForm input[type="email"],
+ .nameForm input[type="password"] {
+ width: 12em;
+ }
+ 
+ .nameForm button {
+ padding: 0.7em;
+ border-radius: 0.5em;
+ background: #eee;
+ border: none;
+ font-weight: bold;
+ margin-left: 1.5em;
+ }
+ 
+ .nameForm button:hover {
+ background: #ccc;
+ cursor: pointer;
+ }

@@ -40,7 +40,7 @@ h1 {
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -63,7 +63,7 @@ h1 {
 }
 
 .card {
-  padding: 2em;
+  padding: 1em;
 }
 
 .read-the-docs {
@@ -175,6 +175,19 @@ details summary{
   padding:.5rem; 
 }
 
+#nameElement{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  width: 100%;
+  padding:1rem;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  z-index: -1;
+  align-items: flex-end;
+
+}
 /* Greater than or equal to 1000px */
 @media (width >= 1000px) {}
 
