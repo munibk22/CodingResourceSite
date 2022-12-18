@@ -8,6 +8,16 @@ export default async function SaveTask(data,imgFormData){
    })
   //  .then(res=> res.json())
   const resdata = await res
+  if(res){
+   const taskForm = $('#taskform ul').find('li').get();
+   taskForm.forEach((input,index)=>{
+    if(index>2)
+    input.lastElementChild.value = "";
+    sessionStorage.getItem("PointsArry").clear();
+   })
+
+  }
+
     console.log(resdata)
 }
 
