@@ -1,6 +1,4 @@
 export const BulletPointUtil= async(point="")=>{
-
- // let bulletPointArry = JSON.parse(sessionStorage.getItem("PointsArry"));
  if(point){
  let bulletPointArry = JSON.parse(sessionStorage.getItem("PointsArry"));
  if(bulletPointArry == null)

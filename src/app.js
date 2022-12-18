@@ -17,7 +17,9 @@
 
 const init=()=>{
   console.log("getTaskList"); 
-  getTaskList(); 
+  getTaskList();  
+  // const lis = $('#taskform ul').find('li input').get();
+  // console.log(lis);
 }
 
 /**
@@ -57,9 +59,6 @@ $(submitBtn).on('click',(e)=>{
   // taskList.push({...taskObj});
   // window.localStorage.setItem("My Task List",JSON.stringify(taskList));
   SaveTask(formData,imgFormData);
-  // saveTask(formData,imgFormData);
-  // console.table(formData.getAll());
-  // console.table(taskList);
 })
 
   // const handleName = async(e) =>{
