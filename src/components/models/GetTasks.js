@@ -1,11 +1,16 @@
 
-onclick = () => {
- console.log(!detailElem.hasAttribute("open"))
- if(!detailElem.hasAttribute("open"))
- getTaskList(); 
-}
+// $('#displaytasks').onclick = () => {
+//  console.log(!detailElem.hasAttribute("open"))
+//  if(!detailElem.hasAttribute("open"))
+//  getTaskList(); 
+// }['taskId', 'taskgroup', 'subgroup', 'topic', 'code', 'definition', 'description', 'html', 'css', 'website', 'bulletPoints', 'youTube', 'subTopic', 'lastModified', 'userMod', 'inpFile']
 
-// $('#displaytasks').on('click',()=>null);
+
+$('#displaytasks').on('click',()=>{
+ console.log(!detailElem.hasAttribute("open"))
+  if(!detailElem.hasAttribute("open"))
+  getTaskList(); 
+});
 export async function getTaskList(){
  try {
   const taskResponse = await fetch

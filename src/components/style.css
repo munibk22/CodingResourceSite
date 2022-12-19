@@ -134,13 +134,13 @@ details {
   
 }
 .container{
-  max-width:95rem;
+  /* max-width:95rem;
   margin:auto;
   display:flex;
   flex-direction: column;
   gap: .5rem;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   /* padding:1rem; */
 }
 
