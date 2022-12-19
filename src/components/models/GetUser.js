@@ -1,17 +1,35 @@
 export async function GetUser(nameForm){
  console.log("GetUser CALL")
- const url ='http://localhost:8082/getUser'
+ const url ='http://localhost:8082/getUser';
+//  fetch(url,{
+//     method:'POST',
+//   body:  nameForm,
+//   mode:'cors'
+
+//  }).then((response) => {
+//   console.log(response);
+//   response.json().then((data) => {
+//       console.log(data);
+//   });
+// });
 try {
  const response = await fetch(url,{
   method:'POST',
   body:  nameForm,
+  mode:'cors'
  })
+ console.log(response);
  const data = await response.json();
+ console.log(data);
  if(data.userName != null){
 console.log(data.userName);
-$("#nameElement").html(`<span class=loggedUserName>Welcome ${data.userName}</span>
-<div><span> ${data.password}</span></div>
+const rightGrid = $('#gridSection3').find('[data-user-details]');
+// $("#nameElement").html(`<span class=loggedInUser>${data.userName}</span>
+$(rightGrid).append(`<ul class=loggedInUser>
+<li>${data.userName}</li>
+<li> ${data.password}</li></ul>
 `);
+sessionStorage.setItem(JSON.stringify(data.userName),(JSON.stringify(data.id)));
  }else
  console.log("user not found");
  console.log(data);

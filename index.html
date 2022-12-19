@@ -13,10 +13,28 @@
     <link rel="stylesheet" href="/src/components/Css/FormStyles.css">
   </head>
   <body>
-   <div id="" class="container">
-     <div id="nameElement"></div>
-  <!-- / HANDLE USER LOGIN-->
-  <section id="handleUser">
+    <section id="headerNav">
+      <ul>Head Nav>
+        <li><a href="https://github.com/munibk22/CodingResourceSite" target="_blank">Github</a></li>
+        <li><a href="https://github.com/munibk22/CodingResourceSite" target="_blank">CheatSheets1</a></li>
+        <li><a href="https://github.com/munibk22/CodingResourceSite" target="_blank">CheatSheets2</a></li>
+        <li><a href="https://github.com/munibk22/CodingResourceSite" target="_blank">Github</a></li>
+      </ul>
+    </section>
+   <div id="grid" >
+   <!-- class="container"> -->
+     <div id="gridSection1" class="grid2">
+      <div data-user-details>Coding Resource Site</div>
+      <div data-link-li>Nav Menu
+        <hr />
+      </div>
+
+     </div>
+     <div id="gridSection2" class="container">
+
+    
+  
+  <section id="handleUser"> <!-- / HANDLE USER LOGIN-->
     <details>
     <summary>Login</summary>
     <!-- <form action="http://localhost:8082/helloname" method="post"  id="nameform" class="nameForm" enctype="multipart/form-data"> -->
@@ -91,11 +109,39 @@
           </form>
         </details>
       </section>
-      <!-- //HANDLE TASK DISPLAY-->
+ 
+  <section>  <!-- / HANDLE QUICK LINKS POST-->
+    <details>
+      <summary>Quick Links</summary>
+      <form  id="linkForm" enctype="application/x-www-form-urlencoded">
+        Add Link
+        <ul>
+          <li data-links>
+            <label for="linkName">name</label>
+            <input type="text" name="name" id="linkName">
+          </li>
+          <li data-links>
+            <label for="url">url</label>
+            <input type="text" name="url" id="url">
+          </li>
+          <li data-links>
+            <label for="linkDescription">description</label>
+            <input type="text" name="description" id="linkDescription">
+          </li>
+          <!-- <li data-links>
+            <label for=""></label>
+            <input type="text" name="" id=""> -->
+          <!-- </li> -->
+          <button id="saveLink" data-link-submit>Submit</button>
+        </ul>
+      </form>
+    </details>
+  </section>
+  <!-- //HANDLE TASK DISPLAY-->
       <section class="imgsection">
       </section>      
-     <!-- //HANDLE TASK TABLE-->
-     <section id="displaytasks">
+
+     <section id="displaytasks">   <!-- //HANDLE TASK TABLE-->
         <details  id="detailElem">
           <summary>Task Table</summary>
           <hr />
@@ -152,7 +198,13 @@
         </ul>
        -->
       </section>
-
+    </div>
+      <div id="gridSection3" class="grid2"> <!-- //HANDLE RIGHT SIDE BAR-->
+        <div data-user-details>User Details</div>
+        <div>
+          <ul id="linksUl" data-ul-links></ul>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -10,9 +10,10 @@ export default async function SaveTask(data,imgFormData){
   const resdata = await res
   if(resdata){
    const taskForm = $('#taskform ul').find('li').get();
-   sessionStorage.clear();
+   // sessionStorage.clear();
+   sessionStorage.removeItem("PointsArry");
    taskForm.forEach((input,index)=>{
-    if(index>2)
+    if(index>3)
     input.lastElementChild.value = "";
    })
   }

@@ -2,7 +2,8 @@
  import SaveTask from './components/models/SaveTask';
  import {BulletPointUtil} from './components/Utils/BulletPointUtil';
  import {GetUser} from './components/models/GetUser';
-
+ import {saveLink} from './components/Utils/PostLinks'
+import {GetLinks} from './components/Utils/GetLinks'
  var taskList = [];
  const taskObj = {};
  const taskForm = $("#taskform");
@@ -18,6 +19,7 @@
 
 const init=()=>{
   console.log("getTaskList"); 
+  GetLinks();
   // getTaskList(); 
 }
 
@@ -33,7 +35,9 @@ $(submitBtn).on('click', async(e)=>{
   const imgForm = document.getElementById('handleimg');
   var formData = new FormData(taskForm);
   var imgFormData = new FormData(imgForm);
-
+const loggedInUser = $('.loggedInUser').text();
+console.log(loggedInUser);
+const user = sessionStorage.getItem(JSON.stringify(loggedInUser));
   const inputFile = document.getElementById("inpFile");
   const taskgroup = document.getElementById("taskgroup").value;
   // $('#inpFile');
@@ -46,6 +50,7 @@ $(submitBtn).on('click', async(e)=>{
   // formData.append("taskgroup",taskgroup)
   pointArry = await BulletPointUtil();
   formData.append("bulletPoints",pointArry);
+  formData.append("lastmodifiedBy",user);
   taskElements.forEach(function(task,i){
     const taskType = task.lastElementChild.tagName;
     // const taskKey = task.dataset.task;
@@ -134,3 +139,5 @@ $("input#addPoint").on('click',function(){
   console.log(pointArry);  
 });
 
+
+// $("[data-link-submit]").on('click',saveLink);
