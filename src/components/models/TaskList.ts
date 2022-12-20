@@ -1,7 +1,6 @@
 import TaskObj,{TaskItem} from './TaskObj'
 
 interface List{
-  id:string[],
  taskList:TaskObj[];
  load():TaskItem[],
  save():boolean,
@@ -20,12 +19,12 @@ private constructor(
  get taskList():TaskObj[]{
   return this._taskList;
  }
- get id():string[]{
-  return this.id;
- }
- set id(id:string){
-  this.id = id;
- }
+//  get id():string[]{
+//   return this.id;
+//  }
+//  set id(id:string){
+//   this.id = id;
+//  }
  public save():boolean{
 try {
    window.localStorage.setItem("My TaskList", 
@@ -41,8 +40,8 @@ try {
   const storedList: string | null = localStorage.getItem("My TaskList");
   if(storedList){    
     let parsedList:TaskObj[]=JSON.parse(storedList || "");
-    parsedList.forEach((itemObj,i)=>{
-      const {id,item,checked,taskgroup,subgroup,code,description}=itemObj;
+    parsedList.forEach((itemObj)=>{
+      // const {item,checked,taskgroup,subgroup,code,description}=itemObj;
       // const keys: TaskObj =Object.keys(it
       let result = Object.values(itemObj)
       

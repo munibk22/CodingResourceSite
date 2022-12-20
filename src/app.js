@@ -2,9 +2,10 @@
  import SaveTask from './components/models/SaveTask';
  import {BulletPointUtil} from './components/Utils/BulletPointUtil';
  import {GetUser} from './components/models/GetUser';
- import {saveLink} from './components/Utils/PostLinks'
- import {GetLinks} from './components/Utils/GetLinks'
-
+ import {saveLink} from './components/Utils/PostLinks';
+ import {GetLinks} from './components/Utils/GetLinks';
+ import CommonUtils from './components/Utils/CommonUtils';
+ 
  var taskList = [];
  const taskObj = {};
  const taskForm = $("#taskform");
