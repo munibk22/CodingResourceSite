@@ -38,7 +38,7 @@ h1 {
 }
 
 #app {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -128,9 +128,13 @@ ul{
 }
 
 details {
-  /* open = true; */
-  /* font: 16px "Open Sans", Calibri, sans-serif; */
-  /* width: 620px; */
+   /* open = true; */
+   font: 16px "Open Sans", Calibri, sans-serif; 
+   height: fit-content;
+   overflow: auto;
+   min-width: 150px;
+   text-align: left;
+   max-width: 90rem;
   
 }
 .container{
@@ -174,3 +178,123 @@ details summary{
   font-weight: 600;
   padding:.5rem; 
 }
+
+
+#nameElement{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  width: 100%;
+  padding:1rem;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  z-index: -1;
+  align-items: flex-end;
+
+}
+
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 9px;
+  }
+  
+  ::-webkit-scrollbar-track {
+  border: 1px solid yellowgreen;
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background: yellowgreen;  
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background: #88ba1c;  
+  }
+
+/* ul{
+  list-style-type:none;
+} */
+
+#grid { 
+  display: grid;
+  grid-template-rows: 1fr 11fr ;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-gap: 1rem;
+  }
+#grid > div {
+  /* font-size: 5vw; */
+  /* padding: .5em; */
+  /* background: rgb(82, 70, 2); */
+  /* text-align: center; */
+}
+
+.grid2 { 
+  display: grid;
+  grid-template-rows: 2fr 8fr;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+    /* border: 3px solid white; */
+  }
+ .grid2 >div[data-user-details]{
+     /* grid-gap: 2rem; */
+    /* border: 3px solid white; */
+    /* text-align: center; */
+  }
+.loggedInUser,ul[data-ul-links]{
+  display: flex;
+  flex-direction:column;
+  gap:.2rem;
+  margin: 0.5rem 1.5rem 1.5rem 0rem;
+  padding:2%;
+  list-style: circle inside;  
+  font-size: .8rem;
+}
+[data-link-li-even]{
+    font-size: .6rem;
+  }
+[data-link-li]+hr,[data-link-li]>hr{
+    width:96%;
+    background-color:green;
+    padding: 1.1%;
+  }
+
+  
+  #headerNav ul{
+    display:flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: #1c1d2c;
+    font-size: smaller;
+      }
+    
+    
+    /* Greater than or equal to 1000px */
+    @media (width >= 1000px) {}
+    
+    /* Less than or equal to 700px */
+    @media (width <= 700px) {
+      body{
+        background-color:white;
+        color:black;
+        font-size:smaller;
+      }
+      #gridSection3{
+        display:none;
+      }
+    }
+    /* Less than or equal to 550px */
+    @media(width <= 650px){
+      details{
+        max-width: 85%;
+        font-size: .5rem;
+      }
+      #gridSection1{
+        display:none;
+      }
+    }
+    /* Between 700px and 1000px */
+    @media (700px <= width <= 1000px) {}
