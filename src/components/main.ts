@@ -1,6 +1,5 @@
 import './style.css'
 import FullList from './models/TaskList'
-import ListItem from './models/TaskObj'
 import ListTemplate from './templates/ListTemplate'
 
 const initApp = (): void => {

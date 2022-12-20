@@ -1,18 +1,22 @@
+import {url,get} from "./CommonUtils";
 const rightGrid = $('#gridSection3').find('ul[data-ul-links]');
 // data-ul-links
 export async function GetLinks(){
- const url = 'http://localhost:8082/getLinks';
- try {
- console.log("GEttin Links");
- const response = await fetch(url);
- const data = await response.json();
- console.log(data);
- if(data)
- displayLinks(data);
+ // const url = 'http://localhost:8082/getLinks';
+//  try {
+//  console.log("GEttin Links");
+//  const response = await fetch(url+'/getLinks');
+//  const data = await response.json();
+//  console.log(data);
+//  if(data)
+//  displayLinks(data);
  
-} catch (error) {
- console.log("Failed getting Links");
- console.log(error);
+// } catch (error) {
+//  console.log("Failed getting Links");
+//  console.log(error);
+let data = await get('/getLinks')
+// .then(displayLinks(data))
+displayLinks(data)
 }
 
 function displayLinks(data){
@@ -27,4 +31,3 @@ function displayLinks(data){
  })
 }
 
-}

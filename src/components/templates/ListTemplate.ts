@@ -35,7 +35,7 @@ check.id = task?.id.toString();
 check.tabIndex= 0;
 check.checked = task.checked;
 li.append(check);
-check.addEventListender('change',()=>{
+check.addEventListener('change',()=>{
  task.checked = !task.checked;
  List.save();
 })
