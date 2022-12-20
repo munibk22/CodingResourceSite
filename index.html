@@ -1,17 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="Jquery-CSS-Folder/jquery-ui.css">
-   <script src="Jquery-JS-Folder/jquery-3.6.0.js"></script>
-   <script src="Jquery-JS-Folder/jquery-ui.js"></script>
-   <script src="script.js"></script>
-   <title>Document</title>
-</head>
-<body>
-   
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Resources Site</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    type="module" defer></script>
+    <script type="module" src="/src/app.js" defer></script>
+    <script type="module" src="/src/components/main.ts"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/FormStyles.css">
+  </head>
+  <body>
+    <section id="headerNav">
+      <ul>Head Nav>
+        <li><a href="https://github.com/munibk22/CodingResourceSite" target="_blank">Github</a></li>
+        <li><a href="https://github.com/munibk22/CodingResourceSite" target="_blank">CheatSheets1</a></li>
+        <li><a href="https://github.com/munibk22/CodingResourceSite" target="_blank">CheatSheets2</a></li>
+        <li><a href="https://github.com/munibk22/CodingResourceSite" target="_blank">Github</a></li>
+      </ul>
+    </section>
+   <div id="grid" >
+   <!-- class="container"> -->
+     <div id="gridSection1" class="grid2">
+      <div data-user-details>Coding Resource Site</div>
+      <div data-link-li>Nav Menu
+        <hr />
+      </div>
+
+     </div>
+     <div id="gridSection2" class="container">
+
+    
+  
+  <section id="handleUser"> <!-- / HANDLE USER LOGIN-->
+    <details>
+    <summary>Login</summary>
+    <!-- <form action="http://localhost:8082/helloname" method="post"  id="nameform" class="nameForm" enctype="multipart/form-data"> -->
+    <form  id="nameform" class="nameForm" enctype="multipart/form-data">
+    <label class="audioOnly" for="userName" data-username>Username</label> 
+    <input type="text" name="userName" required placeholder="username"  id="userName" />
+    </label>       
+    <label class="audioOnly" for="password">Password</label> 
+    <input type="text" name="password" required placeholder="Password">        
+    <label>
+    <input type="checkbox"> Remember me
+    </label>
+      <input type="button" value="Log In" data-username-submit>
+    </form>       
+    </details>
+  </section>
+  <!-- //HANDLE TASK FORM -->
+    <section id="addTask" class="app2" data-task-section>
+      <details>      
+      <summary  id="deets">Add Task</summary>
+      <form action="/" onsubmit="formtest(e)"  enctype="multipart/form-data" id="taskform">
+        <ul data-group="tasklist">
+          <li data-task="taskgroup">
+            <label for="">TASK GROUP</label>
+            <input type="text" name="taskgroup" id="taskgroup" autocapitalize="true" autofocus>
+          </li>
+          <li data-task="subgroup">
+            <label for="subgroup">SUB GROUP</label>
+            <input type="text" name="subgroup" id="subgroup" />
+          </li>
+          <li data-task="topic">
+            <label for="topic">Topic </label>
+            <input type="text" name="topic" id="topic" />
+          </li>
+          <li data-task="subTopic">
+            <label for="subTopic">SubTopic </label>
+            <input type="text" name="subTopic" id="subTopic" />
+          </li>
+          <li data-task="website"><label for="website">Website</label>
+            <input type="url" name="website" id="website"></li>
+          <li data-task="definition"><label for="definition">Definition</label>
+            <input type="text" name="definition" id="definition"></li>
+          <li data-task="html"><label for="html">Html</label>
+            <input type="text" name="html" id="html"></li>
+          <li data-task="css"><label for="css">Css</label>
+             <input type="text" name="css" id="css"></li>
+          <li data-task="code">
+            <label for="code">CODE</label>
+            <input type="text" name="code" id="code"></li>
+            <li data-task="description">
+              <label for="description">DESCRIPTION</label>
+              <textarea type="text" name="description" id="description" rows="8" cols="50"></textarea></li>
+              <li data-task-upload="file">
+                <label for="inpFile">Upload Image</label>
+                <input type="file" name="inpFile" id="inpFile" />
+            </li>
+            <li data-task="bulltpoint">
+               <label  for="bulletpoints">Bullet Points</label>
+               <input type="text" name="" id="bulletpoints" data-bullet-point>
+               <input type="button" id="addPoint" value="+" style="background-color:green;padding:0 1rem;"/>
+            </li>
+            <button id="testid" type="button" data-task-submit="addtask" >Submit Task</button>
+            <!-- <input type="submit" value="Submit" /> -->
+            </ul>
+          </form>
+          <form  id="handleimg" enctype="multipart/form-data">
+            <!-- <li data-task-upload="file">
+              <label for="inpFile">Upload Image</label>
+              <input type="file" name="inpFile" id="inpFile" />
+            </li>
+            <button id="testid" type="button" data-task-submit="addtask" >Submit Task</button> -->
+          </form>
+        </details>
+      </section>
+ 
+  <section>  <!-- / HANDLE QUICK LINKS POST-->
+    <details>
+      <summary>Quick Links</summary>
+      <form  id="linkForm" enctype="application/x-www-form-urlencoded">
+        Add Link
+        <ul>
+          <li data-links>
+            <label for="linkName">name</label>
+            <input type="text" name="name" id="linkName">
+          </li>
+          <li data-links>
+            <label for="url">url</label>
+            <input type="text" name="url" id="url">
+          </li>
+          <li data-links>
+            <label for="linkDescription">description</label>
+            <input type="text" name="description" id="linkDescription">
+          </li>
+          <!-- <li data-links>
+            <label for=""></label>
+            <input type="text" name="" id=""> -->
+          <!-- </li> -->
+          <button id="saveLink" data-link-submit>Submit</button>
+        </ul>
+      </form>
+    </details>
+  </section>
+  <!-- //HANDLE TASK DISPLAY-->
+      <section class="imgsection">
+      </section>      
+
+     <section id="displaytasks">   <!-- //HANDLE TASK TABLE-->
+        <details  id="detailElem">
+          <summary>Task Table</summary>
+          <hr />
+    <!-- <div><img id="ItemPreview" src=""></div> -->
+    <table id="tasksTable"></table>
+  </details>
+     </section>
+      <!-- <button type="button" data-task-submit="addtask">Add</button> -->
+      <section>
+  
+      <!-- <section>
+        <ul data-group-tasks="tasklist"></ul> 
+      </section>
+
+      <h1 class="offscreen">My List</h1>
+
+      <section class="newItemEntry">
+        <h2 class="offscreen">New Item Entry</h2>
+        <form class="newItemEntry__form" id="itemEntryForm">
+          <label for="newItem" class="offscreen">Enter a new to do item</label>
+          <input class="newItemEntry__input" id="newItem" type="text" maxlength="40" autocomplete="off"
+            placeholder="Add item" />
+          <button id="addItem" class="button newItemEntry__button" title="Add new item" aria-label="Add new item to list">
+            +
+          </button>
+        </form>
+      </section>
+  
+      <section class="listContainer">
+        <header class="listTitle">
+          <h2 id="listName">List</h2>
+          <button id="clearItemsButton" class="button listTitle__button" title="Clear the list"
+            aria-label="Remove all items from the list">
+            Clear
+          </button>
+        </header>
+        <hr />
+        <ul id="listItems">
+          <li class="item">
+                      <input type="checkbox" id="1">
+                      <label for="1">eat</label>
+                      <button class="button">X</button>
+                  </li>
+                  <li class="item">
+                      <input type="checkbox" id="2">
+                      <label for="2">sleep</label>
+                      <button class="button">X</button>
+                  </li>
+                  <li class="item">
+                      <input type="checkbox" id="3">
+                      <label for="3">code</label>
+                      <button class="button">X</button>
+                  </li>
+        </ul>
+       -->
+      </section>
+    </div>
+      <div id="gridSection3" class="grid2"> <!-- //HANDLE RIGHT SIDE BAR-->
+        <div data-user-details>User Details</div>
+        <div>
+          <ul id="linksUl" data-ul-links></ul>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
